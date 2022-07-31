@@ -17,7 +17,6 @@ class CourseController extends Controller
     protected function getFilters()
     {
         return [
-            'difficulty' => DifficultyFilter::class
         ];
     }
 }

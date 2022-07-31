@@ -16,13 +16,12 @@ abstract class FilterAbstract
     public function filter(Builder $builder): Builder
     {
         foreach ($this->getFilters() as $filter => $class) {
-            $a = $this->resolveFilter($filter);
-            dd($a);
+            $this->resolveFilter($filter);
         }
         return $builder;
     }
 
-    public function add(array $filters): static
+    public function add(array $filters)
     {
         $this->filters = array_merge($this->filters, $filters);
         return $this;
